@@ -1,0 +1,242 @@
+:root {
+    --mainColor: #d8315b;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto 0 ;
+    padding: 0px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.accordion ul {
+    line-height: 1.8;
+    margin-left: -20px;
+}
+
+.accordion ul li p{
+    margin-left: 10px;
+}
+
+.accordion li {
+    /* list-style: "\276F"; */
+    display: flex;
+    margin-left: 10px;
+    padding-right: 5px;
+    color: #0a2463;
+}
+
+.accordion ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 767px) {
+    .accordion {
+        /* max-width: 700px; */
+        min-width: 922px;
+    }
+}
+
+.accordion .accordion__tabs:focus {
+    outline: none;
+}
+
+@media (max-width: 767px) {
+    .accordion .accordion__tabs {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .accordion .accordion__tabs {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .accordion .accordion__tabs .accordion__tab {
+        margin-right: 5px;
+        padding: .5rem 2rem;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid #a49e9e;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        transition: 0.25s;
+    }
+
+    .accordion .accordion__tabs .accordion__tab:hover {
+        color: #fff;
+        border-color: var(--mainColor);
+        background-color: var(--mainColor);
+    }
+
+    .accordion .accordion__tabs .accordion__tab.active {
+        color: #fff;
+        border-color: var(--mainColor);
+        background-color: var(--mainColor);
+    }
+}
+
+.accordion .accordion__content .accordion__item {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .accordion .accordion__content .accordion__item {
+        display: none;
+        margin: 0;
+        padding-top: 20px;
+        min-height: 150px;
+        border: none;
+        background-color: #fff;
+    }
+
+    .accordion .accordion__content .accordion__item .accordion__label {
+        display: none;
+    }
+
+    .accordion .accordion__content .accordion__item.active {
+        display: block;
+    }
+}
+
+.accordion .accordion__content .accordion__item .accordion__label {
+    position: relative;
+    margin: 0;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+@media (max-width: 767px) {
+    .accordion .accordion__content .accordion__item .accordion__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.accordion .accordion__content .accordion__item .accordion__label:hover {
+    color: #fff;
+    border-color: var(--mainColor);
+    background-color: var(--mainColor);
+}
+
+.accordion .accordion__content .accordion__item .accordion__label:hover:after {
+    color: #fff;
+}
+
+.accordion .accordion__content .accordion__item .accordion__label:after {
+    content: "\276F";
+    color: #0a2463;
+    font-size: 12px;
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: rotate(0deg);
+    transition: 0.25s;
+}
+
+.accordion .accordion__content .accordion__item .accordion__container {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+@media (min-width: 768px) {
+    .accordion .accordion__content .accordion__item .accordion__container {
+        margin-top: 0;
+    }
+}
+
+.accordion .accordion__content .accordion__item.active {
+    padding-bottom: 15px;
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__label {
+    cursor: inherit;
+    color: #fff;
+    border-color: var(--mainColor);
+    background-color: var(--mainColor);
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__label:after {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__container {
+    height: auto;
+    opacity: 1;
+    animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+
+@media (max-width: 767px) {
+    .accordion .accordion__content .accordion__item.active .accordion__container {
+        margin-top: 15px;
+    }
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__container p:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h1:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h2:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h3:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h4:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h5:first-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h6:first-child {
+    margin-top: 0;
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__container p:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h1:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h2:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h3:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h4:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h5:last-child,
+.accordion .accordion__content .accordion__item.active .accordion__container h6:last-child {
+    margin-bottom: 0;
+}
+
+.accordion .accordion__content .accordion__item.active .accordion__container p {
+    line-height: 1.8;
+}
+
+@keyframes accordionIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        transform-origin: 50% 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tabFaded {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

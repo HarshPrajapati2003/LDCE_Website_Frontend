@@ -1,0 +1,15 @@
+        /* custom scroll bar */
+        .bread ::-webkit-scrollbar {
+            width: 0px;
+            display: none;
+        }
+    
+        .bread ::-webkit-scrollbar-track {
+            display: none;
+        }
+    
+        .bread ::-webkit-scrollbar-thumb {
+            /* background: transparent; */
+            display: none;
+            /* border-radius: 10px; */
+        }

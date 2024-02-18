@@ -1,0 +1,19 @@
+.carousel {
+    background-color: #f2f2f2;
+    font-size: 15px !important;
+}
+
+@media screen and (max-width:567px){
+    .carousel {
+            font-size: 10px !important;
+        }
+        .carousel-control-prev-icon,.carousel-control-next-icon{
+            height: 1.5rem !important;
+        }
+        .carousel-indicators{
+            /* display: none !important; */
+        }
+        p{
+            margin-bottom: 0 !important;
+        }
+}

@@ -1,0 +1,21 @@
+ .heading-div .privacy-center--header {
+     padding: 1.5rem 0 0.3rem 0;
+     margin: 0 32px;
+     /* background-color: aqua; */
+    border-bottom: 1px solid #0a2463;
+ }
+
+ .heading-div .privacy-center--header h1 {
+     text-align: center;
+     font-size: 39px;
+     font-weight: 700;
+     color: #d8315b;
+ }
+
+ @media screen and (max-width:768px) {
+    .heading-div .privacy-center--header h1 {
+         text-align: center;
+         font-size: 25px;
+         font-weight: 700;
+         color: #d8315b;
+     }}

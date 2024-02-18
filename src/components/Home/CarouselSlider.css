@@ -1,0 +1,49 @@
+/* CarouselSlider.css */
+
+/* Use a more specific selector to override styles */
+
+div.image-gallery .image-gallery-description {
+    background: "#383838";
+        bottom: 20px;
+        color: white;
+        left: 0;
+        line-height: 1;
+        padding: 10px 80px;
+        position: absolute;
+        white-space: normal;
+        font-size: 2rem;
+        font-weight: 600;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg{
+    width: 23px;
+}
+
+@media screen and (max-width: 900px) {
+    div.image-gallery .image-gallery-description {
+            background: "#383838";
+            bottom: 0px;
+            color: white;
+            left: 0;
+            line-height: 1;
+            padding: 2px 30px;
+            position: absolute;
+            white-space: normal;
+            font-size: smaller;
+        }
+}
+
+@media screen and (max-width: 374px) {
+    div.image-gallery .image-gallery-description {
+        background: "#383838";
+        bottom: 0px;
+        color: white;
+        left: 0;
+        line-height: 1;
+        padding: 2px 30px;
+        position: absolute;
+        white-space: normal;
+        font-size: 10px;
+    }
+}
